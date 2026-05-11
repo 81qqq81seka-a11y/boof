@@ -424,8 +424,8 @@ async def on_business_message(message: Message):
                     pass
             return
 
-    # ─── .lv команда (сердце) ────────────────────────────
-       if raw_text.lower().strip() == ".lv":
+       # ─── .lv команда (сердце) ────────────────────────────
+    if raw_text.lower().strip() == ".lv":
         owner = await get_owner(conn_id)
         if owner and message.from_user and message.from_user.id == owner["user_id"]:
             
@@ -437,7 +437,7 @@ async def on_business_message(message: Message):
 💗❤️❤️💗
  💕💕💕""",
                 
-                # Большое пульсирующее сердце 1
+                # Большое пульсирующее сердце
                 """      ❤️❤️❤️❤️❤️
    ❤️❤️❤️❤️❤️❤️❤️
   ❤️❤️❤️❤️❤️❤️❤️❤️
@@ -448,7 +448,7 @@ async def on_business_message(message: Message):
    ❤️❤️❤️❤️❤️❤️❤️
       ❤️❤️❤️❤️❤️""",
                 
-                # Пульс — ярче с 💖
+                # Пульс 1
                 """     💖💖💖💖💖💖
    💖💗💗💗💗💗💗💖
   💖💗❤️❤️❤️❤️❤️💗💖
@@ -470,7 +470,7 @@ async def on_business_message(message: Message):
    💖💗💗💗💗💗💗💖
 ✨   💖💖💖💖💖💖   ✨""",
                 
-                # Пульс 3 (чуть меньше)
+                # Пульс 3
                 """    💗💗💗💗💗
    💖❤️❤️❤️❤️❤️💖
   💗❤️💖💖💖💖❤️💗
@@ -480,7 +480,7 @@ async def on_business_message(message: Message):
    💖❤️❤️❤️❤️❤️💖
     💗💗💗💗💗""",
                 
-                # Романтический кадр
+                # Романтический текст
                 """       🌹 💖 🌹
      💗 Я ТЕБЯ 💗
        ❤️ ЛЮБЛЮ ❤️
@@ -510,13 +510,13 @@ async def on_business_message(message: Message):
                 except Exception:
                     pass
                 
-                # Чуть быстрее в начале, медленнее в конце
+                # Скорость анимации
                 if i < 4:
                     await asyncio.sleep(0.25)
                 else:
                     await asyncio.sleep(0.45)
             
-            await asyncio.sleep(4)  # держим финальный кадр подольше
+            await asyncio.sleep(4)  # держим финальный кадр
             return
 
     # ─── Режим речи (kawaii / bydlo / crazy) ──────────────
